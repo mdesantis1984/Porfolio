@@ -5,24 +5,16 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Elevation="1">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" 
-                       Color="Color.Inherit"
-                       Edge="Edge.Start"
-                       OnClick="@((e) => DrawerToggle())"
-                        />
-        <MudSpacer />
-        @* <MudLink Href="/" Underline="Underline.None">Home</MudLink>
-        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" /> *@
-    </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
         <MudDrawerHeader>
             <MudImage Src="Img/avatarprofile.png" Width="180" Alt="Marco Alejandro De Santis" Elevation="4" Class="mud-theme-primary rounded-circle"></MudImage>
         </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
-    <MudMainContent Class="px-8">
-        @Body
+    <MudMainContent >
+        <MudContainer Class="px-8 mt-8">
+            @Body
+        </MudContainer>
     </MudMainContent>
 </MudLayout>
 

@@ -1,0 +1,36 @@
+﻿@layout WelcomeLayout
+@rendermode RenderMode.InteractiveServer
+@page "/"
+
+
+<MudPaper Class="d-flex align-content-center flex-wrap flex-grow-1 gap-4 justify-content-center position-relative pa-5" MaxWidth="608px" MaxHeight="520px" Elevation="4" Outlined="true">
+
+    <MudGrid Justify="Justify.Center">
+        <MudItem xs="12" Class="d-flex align-center justify-center mud-width-full ">
+
+        </MudItem>
+        <MudItem xs="12" Class="d-flex align-center justify-center mud-width-full ">
+            <MudImage Src="Img/avatarprofile.png" Width="200" Alt="Marco Alejandro De Santis" Elevation="4" Class="mud-theme-primary rounded-circle ma-8"></MudImage>
+        </MudItem>
+        <MudItem xs="12" Class="d-flex align-center justify-center mud-width-full py-4">
+            <h1>Welcome to my portfolio</h1>
+        </MudItem>
+        <MudItem xs="12" Class="d-flex align-center justify-center mud-width-full ">
+            <MudButton Href="login"
+                       Target="_blank"
+                       Variant="Variant.Outlined"
+                       StartIcon="@Icons.Custom.Brands.LinkedIn"
+                       Color="Color.Tertiary"
+                       Disabled=false
+                       Size="Size.Large"
+                       Class="ma-10">
+                Sign in
+            </MudButton>
+        </MudItem>
+
+
+
+    </MudGrid>
+</MudPaper>
+
+

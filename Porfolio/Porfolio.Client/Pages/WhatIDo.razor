@@ -1,3 +1,23 @@
-﻿@page "/WhatIDo"
+﻿@attribute [Authorize]
+@rendermode RenderMode.InteractiveAuto
+
+@page "/WhatIDo"
 
 <h3>WhatIDo</h3>
+
+
+<AuthorizeView>
+
+    <Authorized>
+        <h1>Resume</h1>
+    </Authorized>
+
+    <Authorizing>
+
+    </Authorizing>
+
+    <NotAuthorized>
+        <NotAutorizedCustom />
+    </NotAuthorized>
+
+</AuthorizeView>

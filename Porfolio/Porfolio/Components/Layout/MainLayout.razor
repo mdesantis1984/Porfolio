@@ -5,12 +5,28 @@
 <MudSnackbarProvider />
 
 <MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        
+        @if (user == null)
+        {
+            <p>Cargando...</p>
+        }
+        else
+        {
+            <MudText Align="Align.Left" Typo="Typo.caption"> @userEmail </MudText>
+        }
+    </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
         <MudDrawerHeader>
             <MudImage Src="Img/avatarprofile.png" Width="180" Alt="Marco Alejandro De Santis" Elevation="4" Class="mud-theme-primary rounded-circle"></MudImage>
         </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
+
+   
+    
     <MudMainContent >
         <MudContainer Class="px-8 mt-8">
             @Body

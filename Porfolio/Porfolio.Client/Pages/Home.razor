@@ -1,0 +1,55 @@
+﻿@attribute [Authorize]
+@rendermode RenderMode.InteractiveAuto
+
+@page "/Home"
+
+
+<PageTitle>Marco Alejandro De Santis - Home</PageTitle>
+
+
+<AuthorizeView>
+
+    <Authorized>
+        <div class="background-image-container">
+            <div class="content">
+
+                <br /><br /><br />
+
+                <MudText Typo="Typo.h3" Align="Align.Center">Bienvenido</MudText>
+
+                <br /><br /><br />
+
+                <MudText Typo="Typo.h5" Align="Align.Center">
+                    Soy un programador autodidacta con experiencia en desarrollo
+                    fullstack y habilidades de liderazgo técnico.
+                </MudText>
+
+                <br /><br /><br />
+
+                <MudText Typo="Typo.h4" Align="Align.Center">
+                    Con sede en Argentina y España
+                </MudText>
+
+                <br /><br /><br />
+
+                <MudText Align="Align.Center">
+                    <MudButton Href="https://www.linkedin.com/in/madesantis/" Target="_blank" Variant="Variant.Filled" EndIcon="@MaterialDesignIcons.Normal.Whatsapp" Style="background-color: mediumseagreen; color: white; width: 200px; height: 60px;">
+                        Contactame
+                    </MudButton>
+                </MudText>
+
+            </div>
+        </div>
+    </Authorized>
+
+    <Authorizing>
+        <p>Authorizing..</p>
+    </Authorizing>
+
+    <NotAuthorized>
+        <NotAutorizedCustom />
+    </NotAuthorized>
+
+</AuthorizeView>
+
+

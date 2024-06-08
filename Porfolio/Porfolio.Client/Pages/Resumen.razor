@@ -1,4 +1,20 @@
-﻿@page "/Resume"
+﻿@attribute [Authorize]
+@rendermode RenderMode.InteractiveAuto
 
-<h3>Resumen</h3>
+@page "/Resume"
 
+<AuthorizeView>
+
+    <Authorized>
+        <h1>Resume</h1>
+    </Authorized>
+
+    <Authorizing>
+
+    </Authorizing>
+
+    <NotAuthorized>
+        <NotAutorizedCustom />
+    </NotAuthorized>
+
+</AuthorizeView>

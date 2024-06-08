@@ -1,4 +1,79 @@
-﻿@page "/AboutMe"
+﻿@attribute [Authorize] 
+@rendermode RenderMode.InteractiveAuto
 
-<h3>AboutMe</h3>
+@page "/AboutMe"
 
+<PageTitle>Marco Alejandro De Santis - AboutMe</PageTitle>
+
+
+<AuthorizeView>
+
+    <Authorized>
+        <MudText Typo="Typo.h3" Color="Color.Tertiary" Align="Align.Left">
+            About Me
+        </MudText>
+
+        <br /><br />
+
+        <MudGrid Justify="Justify.FlexStart">
+            <MudItem sm="12" md="8">
+                <MudText Align="Align.Justify">
+                    Soy Marco Alejandro De Santis, Lead Technical Specialist en Prosegur, una empresa líder en seguridad integral.
+                    Tengo más de 10 años de experiencia en el desarrollo y gestión de proyectos IT, utilizando tecnologías cloud, microservicios y Docker.
+                    Además, soy Webmaster Profesional egresado de la Universidad Tecnológica Nacional, con múltiples certificaciones en programación web, mandos medios y relaciones públicas.
+                    Mi misión es brindar soluciones innovadoras y eficientes a los desafíos y necesidades de los clientes, trabajando con equipos locales y distribuidos, y aplicando metodologías ágiles y procesos de mejora continua. He participado en grandes proyectos de reconocidas empresas nacionales, logrando aumentar la productividad, la calidad y la satisfacción de los usuarios. También soy fundador de thisCloud.com.ar, una empresa de servicios web en la nube, que ofrece soluciones personalizadas y flexibles a diferentes sectores.
+                    Me apasiona la tecnología, el aprendizaje constante y el trabajo en equipo.
+                </MudText>
+            </MudItem>
+            <MudItem sm="12" md="4">
+                <MudGrid Justify="Justify.FlexStart" Spacing="-2">
+                    <MudItem xs="12">
+                        <MudTextField T="string"
+                                      Variant="Variant.Text" Adornment="Adornment.Start" AdornmentIcon="@MaterialDesignIcons.Outline.Account"
+                                      AdornmentColor="@Color.Tertiary"
+                                      Margin="Margin.Normal"
+                                      Label="Nombre"
+                                      Text="Marco Alejandro De Santis"
+                                      ReadOnly=true />
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudTextField T="string"
+                                      Variant="Variant.Text" Adornment="Adornment.Start" AdornmentIcon="@MaterialDesignIcons.Outline.BagPersonal"
+                                      AdornmentColor="@Color.Tertiary"
+                                      Margin="Margin.Normal"
+                                      Label="Email"
+                                      Text="marco.alejandro.deSantis@outlook.com"
+                                      ReadOnly=true />
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudTextField T="string"
+                                      Variant="Variant.Text" Adornment="Adornment.Start" AdornmentIcon="@MaterialDesignIcons.Outline.BagPersonal"
+                                      AdornmentColor="@Color.Tertiary"
+                                      Margin="Margin.Normal"
+                                      Label="Age"
+                                      Text="40"
+                                      ReadOnly=true />
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudTextField T="string"
+                                      Variant="Variant.Text" Adornment="Adornment.Start" AdornmentIcon="@MaterialDesignIcons.Outline.Account"
+                                      AdornmentColor="@Color.Tertiary"
+                                      Margin="Margin.Normal"
+                                      Label="From"
+                                      Text="Villa Carlos Paz, Cordoba, Argentina"
+                                      ReadOnly=true />
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+        </MudGrid>
+    </Authorized>
+
+    <Authorizing>
+        <p>Authorizing..</p>
+    </Authorizing>
+
+    <NotAuthorized>
+        <NotAutorizedCustom />
+    </NotAuthorized>
+
+</AuthorizeView>

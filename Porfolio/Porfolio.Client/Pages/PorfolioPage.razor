@@ -1,7 +1,20 @@
-﻿@page "/PorfolioPage"
+﻿@attribute [Authorize]
+@rendermode RenderMode.InteractiveAuto
 
-<h3>PorfolioPage</h3>
+@page "/PorfolioPage"
 
-@code {
+<AuthorizeView>
 
-}
+    <Authorized>
+        <h1>PorfolioPage</h1>
+    </Authorized>
+
+    <Authorizing>
+
+    </Authorizing>
+
+    <NotAuthorized>
+        <NotAutorizedCustom />
+    </NotAuthorized>
+
+</AuthorizeView>
